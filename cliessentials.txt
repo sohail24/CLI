@@ -1,0 +1,160 @@
+basic linux command (shell scripting)
+CLI Essentials
+
+cd 
+pwd
+ls
+cp
+mv
+rm
+echo(linux version of print)
+cat
+less
+grep
+mkdir
+touch
+chmod
+man + help (like a manual) 
+(to save ctrl o, to exit ctrl x)
+
+###################################################################################
+ls --help (flag available for ls)
+(eg : ls -l will give more informaton or long listing . it also shows permission)
+
+permissions types: 
+user group others
+
+xyz  abc   efg (some random number say for now from 0 to 7)
+
+0 = 0 = nothing
+1 = 1 = execute
+2 = 2 = write
+3 = 2+1 = w+x
+4 = 4 = read
+5 = 4+1 = r+x
+6 = 4+2 = r+w
+7 = 4+2+1 = r+w+x
+
+eg chmod 777 filename
+###################################################################################
+cp filename directorylocation
+
+###################################################################################
+mv filename directorylocation
+
+###################################################################################
+rm filnename
+
+###################################################################################
+echo "hello world"
+
+###################################################################################
+cat filename
+
+shows content of file in same cli
+###################################################################################
+less filename
+
+similar like cat command but open up new window and override previous window
+so that it doesnt create mess
+to go back press q
+###################################################################################
+mv --help | grep verbose
+
+say u use mv -v 
+(it explains what is being done in details for eg moving gb of
+files)
+###################################################################################
+touch file1.txt file2.txt file3.txt
+
+creates these files or n number of files
+###################################################################################
+mkdir files
+
+creates a directry named "files"
+###################################################################################
+chmod
+
+to alter or change permission associated with a file
+###################################################################################
+nano test.sh
+
+to open a new script
+
+eg: 
+
+#!/bin/sh
+echo "hello world"
+
+(to move out ctrl o)
+to run ./test.sh
+but(premission would be denied) as any scipting u write cannot be run but 
+have permission to read it
+so chmod comes in picture
+
+chmod +x(or)+r(or)+w test.sh
+
+instead of +x 
+chmod 777 test.sh 
+###################################################################################
+man + help
+
+###################################################################################
+
+(basic shell scrp
+
+###################################################################################
+nano text1.sh
+-----------------------------------------------------
+#!/bin/sh (to path of interpreter)
+
+#author : sohail   (here # for comment)
+
+echo "What is your good name?"
+
+read PERSON
+
+echo "Hello, $PERSON"
+
+------------------------------------------------------
+if tried to execute ./text1.sh
+(access denied)
+so type chmod 777 ./text1.sh
+
+###################################################################################
+nano variable.sh
+
+----------------------------------------------------
+#!/bin/sh
+
+#variable_name=variabl_value
+
+NAME="sohail ahmad"
+#this is a scalar varaible
+
+echo $NAME
+
+------------------------------------------------------
+
+chmod 777 variable.sh
+./variable.sh
+###################################################################################
+
+attributes of variable
+
+readonly NAME (didnt allow to do anything with this)
+unset NAME (cleans the value of variable)
+
+###################################################################################
+
+
+
+
+
+
+
+
+
+
+
+
