@@ -146,15 +146,3 @@ readonly NAME (didnt allow to do anything with this)
 unset NAME (cleans the value of variable)
 
 ###################################################################################
-
-
-
-
-
-
-
-
-
-
-
-
